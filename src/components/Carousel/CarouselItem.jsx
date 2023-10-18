@@ -1,0 +1,40 @@
+import { Image } from '@chakra-ui/react'
+
+export const items = [
+  <Image
+    width={'100%'}
+    aspectRatio={'16/9'}
+    borderRadius={'12px'}
+    maxH={'600px'}
+    objectFit={'cover'}
+    src='https://images.hindustantimes.com/tech/img/2022/06/29/960x540/Web_capture_29-6-2022_17284_www.acer.com_1656503916649_1656503940223.jpeg'
+    alt=''
+  />,
+  <Image
+    width={'100%'}
+    aspectRatio={'16/9'}
+    borderRadius={'12px'}
+    maxH={'600px'}
+    objectFit={'cover'}
+    src='https://www.techpowerup.com/img/c9nOQK3AdUiL4VOb.jpg'
+    alt=''
+  />,
+  <Image
+    width={'100%'}
+    aspectRatio={'16/9'}
+    borderRadius={'12px'}
+    maxH={'600px'}
+    objectFit={'cover'}
+    src='https://laptopdeal.vn/wp-content/uploads/2023/02/Screenshot-2023-02-04-231826.png'
+    alt=''
+  />,
+    <Image
+  width={'100%'}
+  aspectRatio={'16/9'}
+  borderRadius={'12px'}
+  maxH={'600px'}
+  objectFit={'cover'}
+  src='https://www.techspot.com/images2/news/bigimage/2021/07/2021-07-01-image-17.jpg'
+  alt=''
+/>,
+]
