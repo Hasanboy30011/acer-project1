@@ -4,6 +4,7 @@ import {
   Button,
   Card,
   CardBody,
+  Container,
   Grid,
   GridItem,
   Heading,
@@ -14,7 +15,6 @@ import {
 import { sofaService } from "../service/sofaService";
 import { BasketContext } from "../context/BasketContext";
 import { useNavigate } from "react-router-dom";
-import { ModalContext } from "../context/ModalContext";
 
 const HotSale = () => {
   const { setProductToStorage } = useContext(BasketContext);
@@ -34,11 +34,14 @@ const HotSale = () => {
   };
 
   return (
-    <Box mt={"35px"}>
-      <Grid templateColumns={"repeat(4,1fr)"} gap={"20px"}>
+   
+    <Box mt={"35px"} pb={20} >
+      <Grid templateColumns={{base:"repeat(1,1fr)",sm:"repeat(2,1fr)",md:"repeat(3,1fr)",lg:"repeat(4,1fr)"}} gap={"20px"}>
         {product.map((item) => {
           return (
             <GridItem
+            border={"1px solid gray"}
+            p={1}
               background={"whiteAlpha.200"}
               height={"fit-content"}
               key={item.id}
@@ -51,6 +54,7 @@ const HotSale = () => {
                 onClick={() => navigate(`/product/${item.id}`)}
               >
                 <Box overflow={"hidden"} height={"250px"}>
+                 
                   <Image
                     src={item.thumbnail}
                     width={"100%"}
@@ -77,7 +81,7 @@ const HotSale = () => {
                 
                 <Button
                   className="product__card-btn"
-                  width={"70%"}
+                  width={"100%"}
                   onClick={() => addToBasket(item)}
                   colorScheme="facebook"
                 >
