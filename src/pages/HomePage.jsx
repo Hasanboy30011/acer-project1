@@ -8,7 +8,6 @@ const HomePage = () => {
     <Container maxW={'1300px'} px={'20px'}>
       <Carousel />
       <Body/>
-     <FooterPage/>
     </Container>
   )
 }

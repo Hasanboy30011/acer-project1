@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
   return (
     <>
     
-    <Box  display={{base:"inline",sm:"flex"}} justifyContent={"space-between"} gap={6}> 
+    <Box  display={{base:"inline",sm:"flex"}} justifyContent={"space-between"} gap={6} mt={100}> 
       
    <Box>
     <Text as={"b"}>Products</Text>
@@ -93,20 +93,29 @@ import { Link } from 'react-router-dom'
     <hr />
     <br />
 
-    <Box display={"flex"} justifyContent={"center"} gap={6}> 
+    <Grid templateColumns={{base:'repeat(1, 1fr)',sm:'repeat(2, 1fr)',md:'repeat(3, 1fr)',lg:'repeat(4, 1fr)'}} gap={6}> 
+    <GridItem>
       <a href='https://www.facebook.com/Acer/'>
     <Image w={10} src='https://thumbs.dreamstime.com/b/facebook-logo-icon-voronezh-russia-november-round-black-color-164585783.jpg' />
       </a>
+      </GridItem>
+      <GridItem>
       <a href='https://www.instagram.com/Acer/'>
     <Image w={10} src='https://img.freepik.com/premium-vector/black-square-social-media-logo_197792-3367.jpg' />
       </a>
+      </GridItem>
+      <GridItem>
       <a href='https://twitter.com/AcerRu'>
     <Image w={10} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0wnOpxaOAt1uOAg9cwadFExpQ58T6-1BJ4IxqoGXoyA&s' />
       </a>
+      </GridItem>
+      <GridItem>
       <a href='https://www.youtube.com/channel/UCDVFkz-zoNZMB_RX9bytzgQ'>
     <Image w={10} src='https://i.pinimg.com/originals/20/9b/d8/209bd859c265e7ffc4bfeb75877b23f7.png' />
       </a>
-    </Box>
+      </GridItem>
+
+    </Grid>
     </>
   )
 }

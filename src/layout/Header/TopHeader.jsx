@@ -17,9 +17,6 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import telIcon from '../../assets/icons/phone.svg'
-import deliveryIcon from '../../assets/icons/delivery-icon.svg'
-import BurgerMenu from './BurgerMenu'
 import chocomenu from "../../assets/icons/choco-menu.svg"
 import location from "../../assets/icons/location.svg"
 import user from "../../assets/icons/user.svg"
@@ -63,9 +60,21 @@ const TopHeader = () => {
           <Link to={"/"} style={{display:"flex",gap:"10px"}}>
             <Image  src={location} />
           </Link>
-          <ChakraLink display={'flex'} alignItems={'center'} gap={'12px'}>
+          <Menu>
+  <MenuButton>
+  <ChakraLink display={'flex'} alignItems={'center'} gap={'12px'}>
+            
             <Image src={user} />
           </ChakraLink>
+  </MenuButton>
+  <MenuList color={"black"}>
+  <Link to={"/login"}><MenuItem> Login</MenuItem></Link>
+  <Link to={"/register"}> <MenuItem>Register</MenuItem></Link>
+  <Link><MenuItem>Mark as Draft</MenuItem></Link>
+   
+  </MenuList>
+</Menu>
+         
         </Box>
       </Container>
     </Box>

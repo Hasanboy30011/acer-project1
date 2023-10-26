@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { Navigate, createBrowserRouter } from 'react-router-dom'
 import Layout from '../layout/Layout'
 import HomePage from '../pages/HomePage'
 import BasketPage from '../pages/BasketPage'
@@ -17,6 +17,10 @@ import Endurourban from "../pages/Endurourban"
 import Travel from "../pages/Travel"
 import Extensa from "../pages/Extensa"
 import Spin from "../pages/Spin"
+import Product from '../product/Product'
+import Auth from '../pages/Auth'
+import Login from '../components/Login'
+import Register from '../components/Register'
 export const router = createBrowserRouter([
   {
     element: <Layout />,
@@ -25,6 +29,15 @@ export const router = createBrowserRouter([
         path: '/',
         element: <HomePage />,
       },
+      {
+        path: "/product/:id",
+        element: <Product />,
+      },
+      {
+        path: "/product/",
+        element: <Navigate to={"/"} />,
+      },
+
       {
         path: '/noutbooks',
         element: <Noutbooks/>,
@@ -93,6 +106,19 @@ export const router = createBrowserRouter([
         path: '/spin',
         element: <Spin/>,
       },
+      
+      
+          {
+            path:'/login',
+            element:<Login/>
+          },
+          {
+            path:'/register',
+            element:<Register/>
+          }
+       
+     
+  
     ],
   },
 ])

@@ -2,9 +2,9 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import TopHeader from './Header/TopHeader'
 import Header from './Header/Header'
-import { Box, Container } from '@chakra-ui/react'
+import { Box, Center, Container } from '@chakra-ui/react'
 import Filter from './Header/Filter'
-
+import FooterPage from "../pages/FooterPage"
 const Layout = () => {
   return (
     <>
@@ -18,7 +18,8 @@ const Layout = () => {
       <main>
         <Outlet />
       </main>
-      <footer>footer</footer>
+      <footer><FooterPage/></footer>
+      <footer><Center> Powered by <a href="https://www.youtube.com/@infinitychess12/videos">Khasanboy</a>←←←Click this</Center></footer>
     </>
   )
 }

@@ -1,10 +1,8 @@
 import { Box, Container, HStack, Heading, Image, Text, Tooltip } from "@chakra-ui/react";
-import logo from "../../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import Filter from "./Filter";
-import { Heart } from "@styled-icons/bootstrap/Heart";
 import { Basket } from "@styled-icons/ionicons-sharp/Basket";
-import { User } from "@styled-icons/boxicons-regular/User";
+
 import BurgerMenu from "./BurgerMenu";
 import { useContext } from "react";
 import { BasketContext } from "../../context/BasketContext";
@@ -23,8 +21,8 @@ const Header = () => {
     >
       <Box display={"flex"} alignItems={"center"}>
         <BurgerMenu />
-        <Box>
-          <Link to={"/"}>
+        <Box marginRight={20}> 
+          <Link  to={"/"} >
             <Image src={acer} height={25} minW={"112px"} />
           </Link>
         </Box>
@@ -40,6 +38,24 @@ const Header = () => {
         <Filter />
       </Box>
       <HStack spacing={"20px"}>
+      <Link to="/basket" style={{ position: "relative" }}>
+          <Text
+            width={"25px"}
+            height={"25px"}
+            position={"absolute"}
+            top={"-20px"}
+            left={"10px"}
+            background={"red"}
+            color={"#fff"}
+            textAlign={"center"}
+            borderRadius={100}
+          >
+            {basket.length}
+          </Text>
+          <Tooltip label="basket" hasArrow>
+            <Basket width={25} height={25} position={""} />
+          </Tooltip>
+        </Link>
       </HStack>
     </Container>
     
